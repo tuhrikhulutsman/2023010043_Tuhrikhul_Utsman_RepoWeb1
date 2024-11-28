@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-image: url("../uts2023010043_tuhrikhul/img/Stadion-GBK.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #000000;
+    padding: 60px 30px;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #444;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+nav .login-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%); 
+    background-color: #B17457;
+    color: #f8f7f6; 
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav .login-btn:hover {
+    background-color: #495d3b
+}
+
+main {
+    padding: 20px;
+}
+
+main img {
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    margin-top: 50px;
+}
+footer img {
+    margin-top: 10px;
+    border-radius: 5px; /* Membuat gambar dengan sudut membulat */
+}
