@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Alya & Bima</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .cover {
+            background: url('img/gamabrBG.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: white;
+        }
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+        .cover-content {
+            position: relative;
+            z-index: 1;
+        }
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+        }
+        .cursive {
+            font-family: 'Great Vibes', cursive;
+        }
+        .section {
+            padding: 4rem 1rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid #1e40af;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            background: #1e40af;
+            border-radius: 50%;
+        }
+        .floral-border {
+            border: 2px solid #1e40af;
+            border-radius: 10px;
+            padding: 1rem;
+            background: url('https://source.unsplash.com/random/100x100?floral') repeat;
+            background-size: 50px;
+        }
+        .btn-primary {
+            background-color: #1e40af;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Section -->
+    <section id="cover" class="cover">
+        <div class="cover-content">
+            <h1 class="text-5xl md:text-7xl cursive mb-4">Rikhul & Serli</h1>
+            <p class="text-md">Kami mengundang Anda untuk merayakan momen cinta kami</p>
+            <button onclick="openInvitation()" class="btn-primary mt-6">Buka Undangan</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Ucapan Syukur -->
+        <section class="section text-center bg-blue-50">
+            <h2 class="text-3xl md:text-4xl cursive text-blue-800 mb-4">Puji Syukur</h2>
+            <p class="text-lg max-w-2xl mx-auto">
+                Dengan memohon rahmat dan ridho Allah Subhanahu wa Ta'ala, kami berniat menyelenggarakan pernikahan untuk menyempurnakan ibadah kami. Kami bersyukur atas anugerah cinta dan kebersamaan yang telah diberikan kepada kami untuk memulai perjalanan baru ini.
+            </p>
+        </section>
+
+        <!-- Hero Section -->
+        <section class="section text-center floral-border bg-white">
+            <h1 class="text-4xl md:text-6xl cursive text-blue-800">Undangan Pernikahan</h1>
+            <p class="text-lg mt-4">Tuhrikhul Utsman & Serliya Ninta Ayu Wardani</p>
+            <p class="text-md">sabtu, 20 Desember 2025</p>
+            <p class="text-md">Muryolobo RT 03 RW 01 Kec.Nalumsari Kab.Jepara</p>
+        </section>
+
+        <!-- Kutipan Romantis -->
+        <section class="section text-center bg-blue-50">
+            <blockquote class="text-xl italic max-w-2xl mx-auto">
+                "Cinta adalah perjalanan dua jiwa yang saling bertemu, memilih untuk menari bersama di bawah langit selamanya."
+                <footer class="text-sm mt-2">— Anonim</footer>
+            </blockquote>
+        </section>
+
+        <!-- Tentang Pasangan -->
+        <section class="section floral-border bg-white">
+            <h2 class="text-3xl md:text-4xl cursive text-center text-blue-800 mb-8">Tentang Kami</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <img src="img/serli2.jpg" alt="Foto Serli" class="rounded-full w-40 h-40 mx-auto mb-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">Serliya Ninta Ayu Wardani</h3>
+                    <p class="text-sm">Putri dari Bapak Taufik & Ibu Sadiyah</p>
+                </div>
+                <div class="text-center">
+                    <img src="img/rikhul1.jpg" alt="Foto Rikhul" class="rounded-full w-40 h-40 mx-auto mb-4 shadow-lg">
+                    <h3 class="text-xl font-semibold">Tuhrikhul Utsman</h3>
+                    <p class="text-sm">Putra dari Bapak Sunoto & Ibu Muslimah</p>
+                    <p class="mt-2">Insinyur mancing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cerita Kami -->
+        <section class="section bg-blue-50">
+            <h2 class="text-3xl md:text-4xl cursive text-center text-blue-800 mb-8"></h2>
+            <div id="guestbook" class="max-w-2xl mx-auto"></div>
+        </section>
+
+        <!-- Detail Acara -->
+        <section class="section floral-border bg-white">
+            <h2 class="text-3xl md:text-4xl cursive text-center text-blue-800 mb-8">Detail Acara</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold">Akad Nikah</h3>
+                    <p class="mt-2">Sabtu, 20 Desember 2025</p>
+                    <p>Pukul 08:00 - 10:00 WIB</p>
+                    <p>Muryolobo RT 03 RW 01 Kec.Nalumsari Kab.Jepara</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold">Resepsi</h3>
+                    <p class="mt-2">Sabtu, 20 Desember 2025</p>
+                    <p>Pukul 11:00 - 14:00 WIB</p>
+                    <p>Muryolobo RT 03 RW 01 Kec.Nalumsari Kab.Jepara</p>
+                    <a href="https://maps.app.goo.gl/7SdFcS4JxLwdKAW89" target="_blank" class="inline-block mt-4 btn-primary">Lihat Peta</a>
+                </div>
+            </div>
+            <p class="text-center mt-6 text-sm">*Dress code: Formal (Nuansa Biru atau Pastel)</p>
+        </section>
+
+        <!-- Galeri -->
+        <section class="section bg-blue-50">
+            <h2 class="text-3xl md:text-4xl cursive text-center text-blue-800 mb-8">Galeri Kami</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="img/Gambar1.jpg" alt="Foto 1">
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="img/gambar2.jpg" alt="Foto 2">
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="img/Gambar3.jpg" alt="Foto 3">
+                </div>
+                <div class="gallery-item animate-on-scroll">
+                    <img src="img/Gambar.4jpg.jpg" alt="Foto 4">
+                </div>
+            </div>
+        </section>
+        <!-- Sumbangan Cinta -->
+        <section class="section floral-border">
+            <h2 class="text-3xl md:text-4xl cursive text-center text-blue-800 mb-8">Sumbangan Cinta</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-lg mb-4">
+                    Sebagai bentuk dukungan dan doa restu untuk perjalanan baru kami, kami dengan rendah hati menerima sumbangan cinta dari hati Anda. Anda dapat mengirimkan hadiah melalui transfer bank ke rekening berikut:
+                </p>
+                <div class="bank-info text-left max-w-md mx-auto">
+                    <p><strong>Bank</strong>: Bank BRI</p>
+                    <p><strong>Nama</strong>: Serliya Ninta Ayu Wardani</p>
+                    <p><strong>No. Rekening</strong>: 123-456-7890123</p>
+                    <p><strong>Cabang</strong>: Jakarta Pusat</p>
+                </div>
+                <div class="bank-info text-left max-w-md mx-auto mt-4">
+                    <p><strong>Bank</strong>: Bank BRI</p>
+                    <p><strong>Nama</strong>: Tuhrikhul Utsman</p>
+                    <p><strong>No. Rekening</strong>: 987-654-3210987</p>
+                    <p><strong>Cabang</strong>: Jakarta Selatan</p>
+                </div>
+                <p class="text-sm mt-4">
+                    Mohon konfirmasi transfer Anda melalui formulir RSVP atau WhatsApp ke nomor +62 85641913034. Kehadiran dan doa Anda adalah hadiah terindah bagi kami.
+                </p>
+            </div>
+        </section>
+
+        <!-- Buku Tamu -->
+        <section class="section bg-blue-50">
+            <h2 class="text-3xl md:text-4xl cursive text-center text-blue-800 mb-8"></h2>
+            <div id="guestbook" class="max-w-2xl mx-auto"></div>
+        </section>
+
+        <!-- Footer with Ucapan Terima Kasih -->
+        <footer class="section text-center floral-border bg-white">
+            <h2 class="text-3xl md:text-4xl cursive text-blue-800 mb-4">Ucapan Terima Kasih</h2>
+            <p class="text-lg max-w-2xl mx-auto">
+                Kami mengucapkan terima kasih yang sebesar-besarnya atas doa, restu, dan kehadiran Anda dalam momen istimewa kami. Kebersamaan Anda adalah anugerah yang tak ternilai bagi kami untuk memulai perjalanan baru ini.
+            </p>
+            <p class="text-lg cursive text-blue-800 mt-6">Dengan cinta, Rikhul & Serli</p>
+            <p class="text-sm mt-2">© 2025 Undangan Pernikahan | Dibuat dengan ❤️</p>
+        </footer>
+    </div>
+
+    <script>
+        // Fungsi untuk membuka undangan
+        function openInvitation() {
+            document.getElementById('cover').classList.add('hidden');
+            document.getElementById('main-content').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+    </script>
+</body>
+</html>
